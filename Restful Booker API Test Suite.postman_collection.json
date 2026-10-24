@@ -593,48 +593,7 @@
       },
       "response": []
     },
-    {
-      "name": "16 — Delete a Booking",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Delete booking returns 201\", function () {\r\n    pm.response.to.have.status(201);\r\n});"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "DELETE",
-        "header": [
-          {
-            "key": "Cookie",
-            "value": "token={{token}}"
-          },
-          {
-            "key": "Accept",
-            "value": "application/json"
-          }
-        ],
-        "url": {
-          "raw": "https://restful-booker.herokuapp.com/booking/{{bookingId}}",
-          "protocol": "https",
-          "host": [
-            "restful-booker",
-            "herokuapp",
-            "com"
-          ],
-          "path": [
-            "booking",
-            "{{bookingId}}"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
+   
       "name": "17 — Verify Deletion",
       "event": [
         {
@@ -682,6 +641,47 @@
       "request": {
         "method": "DELETE",
         "header": [],
+        "url": {
+          "raw": "https://restful-booker.herokuapp.com/booking/{{bookingId}}",
+          "protocol": "https",
+          "host": [
+            "restful-booker",
+            "herokuapp",
+            "com"
+          ],
+          "path": [
+            "booking",
+            "{{bookingId}}"
+          ]
+        }
+      },
+      "response": []
+    },
+ {
+      "name": "16 — Delete a Booking",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Delete booking returns 201\", function () {\r\n    pm.response.to.have.status(201);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "token={{token}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
         "url": {
           "raw": "https://restful-booker.herokuapp.com/booking/{{bookingId}}",
           "protocol": "https",
