@@ -46,8 +46,11 @@ All 39 assertions passed during this execution, with no failed or skipped tests.
 
 ### Test Evidence
 
-- **HTML report:** See [`test-reports/Newman-Report.html`](test-reports/Newman-Report.html)
-- **Screenshots:** See [`Newman Test Execution Summary`](test-reports/NewmanSummary.png)
+- **HTML report:** [View Newman HTML Report](test-reports/Newman-Report.html)
+
+### Newman Test Execution Summary
+
+![Newman Test Execution Summary](test-reports/NewmanSummary.png)
 
 ## Learning Outcomes
 
