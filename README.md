@@ -8,8 +8,9 @@ This project demonstrates REST API testing using Postman against the public Rest
 
 - **Postman** — API requests, collections, and automated test scripts
 - **JavaScript** — Post-response test assertions and collection variables
+- **Newman** — Command-line collection execution and HTML reporting
 - **Restful Booker API** — Public demo API
-- **GitHub** — Project version control and documentation
+- **GitHub** — Version control, documentation, and test evidence
 
 ## Test Coverage
 
@@ -27,16 +28,43 @@ The collection contains 20 requests covering:
 
 ## Test Execution
 
-The collection was executed using Postman's Collection Runner to validate requests and automated assertions.
+The Postman collection was executed using Newman to run the requests and automated test assertions.
+
+### Latest Execution Results
+
+| Metric | Result |
+|---|---:|
+| Total requests | 20 |
+| Total assertions | 39 |
+| Failed tests | 0 |
+| Skipped tests | 0 |
+| Average response time | 386 ms |
+| Total run duration | 9.3 seconds |
+| Iterations | 1 |
+
+All 39 assertions passed during this execution, with no failed or skipped tests.
+
+### Test Evidence
+
+- **HTML report:** See [`test-reports/Newman-Report.html`](test-reports/Newman-Report.html)
+- **Screenshots:** See the `test-reports/` folder for uploaded execution evidence.
 
 ## Learning Outcomes
 
-This project demonstrates practical experience with API testing, HTTP methods, request headers, JSON payloads, authentication, collection variables, automated assertions, and negative testing.
+This project demonstrates practical experience with:
+
+- REST API testing and HTTP methods
+- Request headers and JSON payloads
+- Authentication and collection variables
+- JavaScript-based automated assertions
+- Positive and negative testing
+- Command-line test execution using Newman
+- Test reporting and evidence documentation
 
 ## API Under Test
 
 [Restful Booker Demo API](https://restful-booker.herokuapp.com/)
 
-### Note
+## Note
 
-This project uses the Restful Booker public demo API for testing. portfolio to demonstrate practical API testing skills.
+This project uses the public Restful Booker demo API for portfolio purposes. Results reflect the recorded execution and may vary between runs because the API is publicly accessible and its data can change.
