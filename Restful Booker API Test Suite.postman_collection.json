@@ -593,39 +593,7 @@
       },
       "response": []
     },
-   
-      "name": "17 — Verify Deletion",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Deleted booking is no longer found\", function () {\r\n    pm.response.to.have.status(404);\r\n});"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "https://restful-booker.herokuapp.com/booking/{{bookingId}}",
-          "protocol": "https",
-          "host": [
-            "restful-booker",
-            "herokuapp",
-            "com"
-          ],
-          "path": [
-            "booking",
-            "{{bookingId}}"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
+      {
       "name": "18 — Delete Without Authentication",
       "event": [
         {
@@ -698,6 +666,39 @@
       },
       "response": []
     },
+   {
+      "name": "17 — Verify Deletion",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Deleted booking is no longer found\", function () {\r\n    pm.response.to.have.status(404);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://restful-booker.herokuapp.com/booking/{{bookingId}}",
+          "protocol": "https",
+          "host": [
+            "restful-booker",
+            "herokuapp",
+            "com"
+          ],
+          "path": [
+            "booking",
+            "{{bookingId}}"
+          ]
+        }
+      },
+      "response": []
+    },
+  
     {
       "name": "19 — Authentication with Invalid Credentials",
       "event": [
