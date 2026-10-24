@@ -45,7 +45,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Authentication returns 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response contains a token\", function () {\r\n    const data = pm.response.json();\r\n    pm.expect(data).to.have.property(\"token\");\r\n    pm.expect(data.token).to.be.a(\"string\").and.not.empty;\r\n});\r\n\r\npm.test(\"Response time is under 2 seconds\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(2000);\r\n});\r\n\r\nconst data = pm.response.json();\r\n\r\nif (data.token) {\r\n    pm.collectionVariables.set(\"token\", data.token);\r\n}"
+              "pm.test(\"Authentication returns 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response contains a token\", function () {\r\n    pm.expect(pm.response.json().token).to.be.a(\"string\").and.not.empty;\r\n});\r\n\r\npm.test(\"Response time is under 2 seconds\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(2000);\r\n});\r\n\r\npm.collectionVariables.set(\"token\", pm.response.json().token);"
             ]
           }
         }
@@ -593,8 +593,8 @@
       },
       "response": []
     },
-      {
-      "name": "18 — Delete Without Authentication",
+    {
+      "name": "16 — Delete Without Authentication",
       "event": [
         {
           "listen": "test",
@@ -625,8 +625,8 @@
       },
       "response": []
     },
- {
-      "name": "16 — Delete a Booking",
+    {
+      "name": "17 — Delete a Booking",
       "event": [
         {
           "listen": "test",
@@ -666,8 +666,8 @@
       },
       "response": []
     },
-   {
-      "name": "17 — Verify Deletion",
+    {
+      "name": "18 — Verify Deletion",
       "event": [
         {
           "listen": "test",
@@ -698,7 +698,6 @@
       },
       "response": []
     },
-  
     {
       "name": "19 — Authentication with Invalid Credentials",
       "event": [
